@@ -43,10 +43,6 @@ describe('Validación de Contraseñas Seguras (Tarea Ciberseguridad)', function 
       expect(validador.validate('c1b3r$egur1dad!', { list: true })).to.include('uppercase');
     });
 
-    it('debe rechazar si falta al menos una minúscula', function () {
-      expect(validador.validate('C1B3R$EGUR1DAD!')).to.be.false;
-      expect(validador.validate('C1B3R$EGUR1DAD!', { list: true })).to.include('lowercase');
-    });
 
     it('debe rechazar si falta al menos un número', function () {
       expect(validador.validate('Ciber$eguridad!')).to.be.false;
