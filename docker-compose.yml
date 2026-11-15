@@ -1,0 +1,8 @@
+services:
+  test-runner:
+    build: .
+    volumes:
+      - .:/app
+      - /app/node_modules
+    command: npm test
+
