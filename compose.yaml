@@ -1,8 +1,7 @@
 services:
   validador-test:
     build: .
-    userns_mode: "keep-id"
     volumes:
       - .:/app:Z
       - /app/node_modules
-    command: npx mocha test/validador.test.js
+    command: npx mocha tests/validador.test.js
